@@ -102,8 +102,3 @@ router.get('/:date/cumulative', (req, res) => {
 });
 
 module.exports = router;
-
-/*
-getCountByDate(date)
-getCumulativeByDate(date)
-*/
