@@ -40,7 +40,7 @@ function populateDB(results) {
     results.forEach((result) => {
         db('cases').insert(result)
             .then(() => {
-                //update de load progress
+
                 loadProgress++;
 
                 //show the load progress message each 0.01%
@@ -50,6 +50,8 @@ function populateDB(results) {
                 }
 
                 if (loadProgress === loadProgressMax) {
+                    process.stdout.write("\r\x1b[K")
+                    process.stdout.write(`Progress: ${((loadProgress / loadProgressMax) * 100).toFixed(2)}%`);
                     console.log('\nFinished insert on Database');
                     console.log('Press Ctrl/Command + C to exit or close the window.');
                 }

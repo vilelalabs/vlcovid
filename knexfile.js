@@ -1,13 +1,23 @@
 
 module.exports = {
     development: {
-        client: 'sqlite3',
-        useNullAsDefault: true,
+        client: 'pg',
         connection: {
-            filename: './data/development.db3'
+            host: 'localhost',
+            port: 5432,
+            user: 'vluser',
+            password: 'vluser',
+            database: 'vlcovid'
         },
-        //6h to load data locally with sqlite3
-        acquireConnectionTimeout: 1000 * 60 * 60 * 6,
+        pool: {
+            min: 2,
+            max: 10
+        },
+        migrations: {
+            tableName: 'knex_migrations',
+            directory: './migrations'
+
+        }
     },
     production: {
         client: 'pg',
@@ -20,5 +30,5 @@ module.exports = {
             tableName: 'knex_migrations',
             directory: './migrations'
         }
-    }
+    },
 }

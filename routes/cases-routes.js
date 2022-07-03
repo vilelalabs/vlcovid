@@ -75,7 +75,6 @@ router.get('/:date/cumulative', (req, res) => {
                         }
                         else {
                             jsonOut[element.location] = {
-                                location: element.location,
                                 cumulativeAll: element.count,
                                 perVariant: [{
                                     variant: element.variant,

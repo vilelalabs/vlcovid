@@ -6,6 +6,7 @@ module.exports = {
     getDates,
 };
 
+//cases endpoints
 
 function getCountByDate(date) {
 
