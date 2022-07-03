@@ -6,8 +6,6 @@ const router = express.Router();
 
 //endpoints for /cases
 router.get('/:date/count', (req, res) => {
-    //Listar todos os registros da base de dados no dia selecionado,
-    //agrupados por país e separados por variante.
 
     const { date } = req.params;
 
