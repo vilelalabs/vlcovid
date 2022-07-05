@@ -17,7 +17,7 @@ async function csvToDB() {
         .pipe(csv())
         .on('data', (data) => {
             const newDate = formater(
-                new Date(data.date),
+                new Date(Date.UTC(data.date)),
                 'yyyy-MM-dd', {
                 locale: ptBR,
             });
