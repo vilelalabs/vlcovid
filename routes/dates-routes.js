@@ -15,6 +15,9 @@ router.get('/', (req, res) => {
             else {
                 res.status(404).json({ message: 'No data found' });
             }
+        })
+        .catch(err => {
+            res.status(500).json({ message: err });
         });
 });
 
