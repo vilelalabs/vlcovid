@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.status(200).send("Backend Challenge 2021 🏅 - Covid Daily Cases");
+    res.status(200).json({ "message": "Backend Challenge 2021 🏅 - Covid Daily Cases" });
 });
 
 app.use('/cases', casesRoute);
