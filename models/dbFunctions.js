@@ -24,14 +24,12 @@ function getCumulativeByDate(date) {
         .orderBy('location')
         .orderBy('variant')
         .select('location', 'variant', 'num_sequences as count')
-
-
 }
 
 // dates endpoint
 
-function getDates() {
-    return db('cases')
+async function getDates() {
+    return await db('cases')
         .select('date')
         .groupBy('date')
         .orderBy('date', 'desc')
