@@ -4,7 +4,7 @@
   "description": "Backend project to get data from kaggle.com datasets about Covid-19",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node index.js",
     "server": "nodemon index.js",
     "dbstart": "node initDBData.js"
@@ -28,7 +28,10 @@
     "express": "^4.18.1",
     "knex": "^2.1.0",
     "nodemon": "^2.0.18",
-    "pg": "^8.7.3",
-    "sqlite3": "^5.0.8"
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "jest": "^28.1.2",
+    "supertest": "^6.2.4"
   }
 }
