@@ -5,6 +5,21 @@ const Cases = require('../models/dbFunctions');
 const router = express.Router();
 
 //endpoints for /dates
+
+/**
+ * @swagger
+ * /dates:
+ *  get:
+ *      description: Returns cases count for the selected date for each country divided by variant
+ *         
+ *      responses:
+ *          200:
+ *              description: Successful request
+ *          404:
+ *              description: Not found any data in the database
+ *          500:
+ *              description: Internal Server Error / Error retrieving data from the database
+ */
 router.get('/', (req, res) => {
 
     Cases.getDates()

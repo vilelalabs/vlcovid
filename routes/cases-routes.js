@@ -5,6 +5,28 @@ const Cases = require('../models/dbFunctions');
 const router = express.Router();
 
 //endpoints for /cases
+
+
+/**
+ * @swagger
+ * /cases/{date}/count:
+ *  get:
+ *      description: Returns cases count for the selected date for each country divided by variant
+ *      parameters:
+ *       - in: path
+ *         name: date
+ *         required: true
+ *         description: Date in format YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS.000Z
+ *         schema:
+ *           type: string
+ *      responses:
+ *          200:
+ *              description: Successful request
+ *          404:
+ *              description: Not found any data in the database
+ *          500:
+ *              description: Internal Server Error / Error retrieving data from the database
+ */
 router.get('/:date/count', (req, res) => {
 
     const { date } = req.params;
@@ -47,6 +69,26 @@ router.get('/:date/count', (req, res) => {
 
 });
 
+/**
+ * @swagger
+ * /cases/{date}/cumulative:
+ *  get:
+ *      description: Returns total cumulative cases count from start of database to selected data(including) for each country divided by variant 
+ *      parameters:
+ *       - in: path
+ *         name: date
+ *         required: true
+ *         description: Date in format YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS.000Z
+ *         schema:
+ *           type: string
+ *      responses:
+ *          200:
+ *              description: Successful request
+ *          404:
+ *              description: Not found any data in the database
+ *          500:
+ *              description: Internal Server Error / Error retrieving data from the database
+ */
 router.get('/:date/cumulative', (req, res) => {
     const { date } = req.params;
     Cases.getCumulativeByDate(date)

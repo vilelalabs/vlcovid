@@ -21,7 +21,7 @@ Projeto de back-end para obter dados dos datasets do kaggle.com sobre casos de C
 ```
 npm install
 ```
-- criar arquivo ``.env`` com as variáveis de ambiente com dados relacionadso à instalação local do postgreSQL
+- criar arquivo ``.env`` com as variáveis de ambiente com dados relacionados à instalação local do postgreSQL
 ```
 LOCAL_USER = USUARIO_valido_no_BC_postgre_local
 LOCAL_PASSWORD = PASSWORD_do_usuario
@@ -85,6 +85,10 @@ https://vlcovid.herokuapp.com/cases/2021-12-26/cumulative
 ```
 npm run test
 ```
+# Documentação da API (Open API 3.0)
+Acessar : https://vlcovid.herokuapp.com/api-docs no ``Heroku``
+
+Acessar : http://localhost:3001/api-docs no servidor ``local``
 
 ```
 This is a challenge by Coodesh
