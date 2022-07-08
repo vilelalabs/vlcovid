@@ -6,7 +6,7 @@ This is a challenge by Coodesh
 
 Projeto de back-end para obter dados dos datasets do kaggle.com sobre casos de Covid-19 e retorná-los como endpoints de uma API.
 
-## Linguagens e Frameworks:
+# Linguagens e Frameworks:
 - Javascript
 - Node.js
 - PostgreSQL
@@ -15,7 +15,6 @@ Projeto de back-end para obter dados dos datasets do kaggle.com sobre casos de C
 - Heroku
 
 # Instalação
-
 
 ## Local
 - Instalar Dependências:
@@ -82,7 +81,10 @@ https://vlcovid.herokuapp.com/cases/2022-01-04/count
 https://vlcovid.herokuapp.com/cases/2021-12-26T03:00:00.000Z/cumulative
 https://vlcovid.herokuapp.com/cases/2021-12-26/cumulative
 
-
+# Testes Unitários
+```
+npm run test
+```
 
 ```
 This is a challenge by Coodesh
