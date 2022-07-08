@@ -1,12 +1,11 @@
 # VLCovid
 Backend Challenge 🏅 2022 - Covid Daily Cases
-```
-This is a challenge by Coodesh
-```
 
 Projeto de back-end para obter dados dos datasets do kaggle.com sobre casos de Covid-19 e retorná-los como endpoints de uma API.
 
-# Linguagens e Frameworks:
+## Vídeo de Apresentação do projeto:
+    https://www.loom.com/share/c6e2c346a3594272b1c22e32bdf8ba12
+# Linguagens e Frameworks
 - Javascript
 - Node.js
 - PostgreSQL
